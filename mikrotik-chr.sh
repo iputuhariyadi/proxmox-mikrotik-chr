@@ -32,9 +32,9 @@ fi
 # Mengecek apakah package jq (json query) telah terinstalasi atau belum
 # Jika belum maka dilakukan instalasi package jq
 if [ $(dpkg -l | awk "/$1/ {print }"|wc -l) -ge 1 ]; then
-        echo "Package jq telah terinstalasi di OpenStack!"
+        echo "Package jq telah terinstalasi di Proxmox!"
 else
-        echo "Melakukan instalasi package jq di OpenStack!"
+        echo "Melakukan instalasi package jq di Proxmox!"
         sudo apt update
         sudo apt -y install jq
 fi
